@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 help(){
 cat << EOF
-cue_split.sh sheet.cue [-t track] [-f format]
+./parse_cue2flac.sh sheet.cue [-t track] [-f format]
 
 sheet.cue: Cue sheet to be parse.
 
@@ -9,8 +9,8 @@ Available Options:
 -h: This message. 
 -t: Specific the track(s) to be extracted.
     e.g. 
-      cue_split.sh whatever.cue -t 1
-      cue_split.sh whatever.cue -t 3,4,2
+      cue_split.sh sheet.cue -t 1
+      cue_split.sh sheet.cue -t 3,4,2
 -f: Specific format (pass to ffmpeg).
     (default will be flac)
 EOF
@@ -159,7 +159,8 @@ while getopts t:f: opt; do
 done
 
 parse_start
-extend_format=${extend_format:-"${GENERAL_FILE##*.}"}
+# extend_format=${extend_format:-"${GENERAL_FILE##*.}"}
+extend_format=${extend_format:-"flac"}
 # echo "extend_format=$extend_format"
 # echo "$audio_track_num audio track(s) found."
 

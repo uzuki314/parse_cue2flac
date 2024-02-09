@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 help(){
 cat << EOF
-cue_split.sh -c .cue [-t track] [-f format]
+cue_split.sh sheet.cue [-t track] [-f format]
+
+sheet.cue: Cue sheet to be parse.
 
 Available Options:
 -h: This message. 
--c: Cue sheet to be parse.
 -t: Specific the track(s) to be extracted.
     e.g. 
       cue_split.sh whatever.cue -t 1

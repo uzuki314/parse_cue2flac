@@ -15,8 +15,8 @@ Available Options:
 -h: This message. 
 -t: Specific the track(s) to be extracted.
     e.g. 
-      cue_split.sh sheet.cue -t 1
-      cue_split.sh sheet.cue -t 3,4,2
+      parse_cue2flac.sh sheet.cue -t 1
+      parse_cue2flac.sh sheet.cue -t 3,4,2
 -f: Specific format (pass to ffmpeg).
     (default will be flac)
 ```
